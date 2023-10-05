@@ -1,1 +1,7 @@
 Hello World!
+
+Please see below some C# coding:
+
+
+string myString = string.Format("{0:C}", 123.45);
+Console.WriteLine(myString);

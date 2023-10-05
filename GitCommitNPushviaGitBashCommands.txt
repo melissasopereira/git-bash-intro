@@ -1,0 +1,238 @@
+************* STEPS IN CREATING A REPO / FILE UPDATES / COMMITS / PUSHS ****************************************
+
+user.melissa@MELISSA MINGW32 ~
+$ pwd  (This is used to localize in which folder are you at right now)
+/c/Users/melissa.pereira
+
+user.melissa@MELISSA MINGW32 ~
+$ git config --global user.name "usernamehere"
+
+user.melissa@MELISSA MINGW32 ~
+$ git config --global user.email "useremailhere@email.com"
+
+user.melissa@MELISSA MINGW32 ~
+$ git clone "https://github.com/melissasopereira/git-bash-intro.git"
+Cloning into 'git-bash-intro'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+
+
+**** INITIALIZING A GIT COMMIT PROJECT ****
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project
+$ git init
+Initialized empty Git repository in C:/Users/melissa/OneDrive/Área de Trabalho/Git Project/.git/
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        my code here.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git add "my code here.txt"
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   my code here.txt
+
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   my code here.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        my code pt 2.txt
+        mycodefile.bmp
+
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git add .
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   my code here.txt
+        new file:   my code pt 2.txt
+        new file:   mycodefile.bmp
+
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git commit -m "initial commit"
+[master (root-commit) da380c3] initial commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 my code here.txt
+ create mode 100644 my code pt 2.txt
+ create mode 100644 mycodefile.bmp
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git commit -m "Second commit"
+On branch master
+nothing to commit, working tree clean
+
+melissa.pereira@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git remote add origin https://github.com/melissasopereira/git-bash-intro
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git push --set-upstream origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 238 bytes | 238.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/melissasopereira/git-bash-intro/pull/new/master
+remote:
+To https://github.com/melissasopereira/git-bash-intro
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+melissa.pereira@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git branch
+* master
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git branch --help
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git log
+commit da380c33d61486509a4f89dcd32aca503a942737 (HEAD -> master, origin/master)
+Author: melissasopereira <melissasopereira@gmail.com>
+Date:   Thu Oct 5 13:23:51 2023 -0300
+
+    initial commit
+
+melissa.pereira@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   my code here.txt
+        modified:   my code pt 2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+melissa.pereira@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git add .
+
+melissa.pereira@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git commit -m "morified file test"
+[master 7bf3ff4] morified file test
+ 2 files changed, 2 insertions(+)
+
+melissa.pereira@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 377 bytes | 377.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/melissasopereira/git-bash-intro
+   da380c3..7bf3ff4  master -> master
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   my code pt 2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git add .
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git commit -m "C# coding initializer"
+[master 871982d] C# coding initializer
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 433 bytes | 144.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/melissasopereira/git-bash-intro
+   7bf3ff4..871982d  master -> master
+
+
+user.melissa@MELISSA MINGW32 ~/OneDrive/Área de Trabalho/Git Project (master)
+$

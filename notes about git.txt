@@ -1,0 +1,57 @@
+Windows Machine - GITBASH terminal
+
+Under MacOS  /  Windows
+
+Type: open . / start . 
+Result: It will open up the Finder Folder / Arquivo Acesso Rápido
+
+Type: ls . FolderABC
+Result: It will describe itens inside of the above folder or it will result in no founded. 
+
+Type: Clear - to clean up terminal 
+
+Type: pwd 
+Result: It will show you the "c/Users/User.Name"
+
+Type: open. 
+
+Type: touch filename.extensioncode such as txt, pdf, py, js
+
+Type: mkdir to create directories you may want to make 
+
+type: rm filename.extension 
+meant to remove files. 
+
+Type: ls -a
+to list up hidden files as well. 
+
+rm -rf: to delete a directory permantly. 
+command k: under macOS
+
+
+
+
+README.md
+
+
+HOW TO:
+
+melissa.pereira@MELISSA MINGW32 ~
+$ pwd
+/c/Users/melissa.pereira
+
+melissa.pereira@MELISSA MINGW32 ~
+$ git config --global user.name "melissasopereira"
+
+melissa.pereira@MELISSA MINGW32 ~
+$ git config --global user.email "melissasopereira@gmail.com"
+
+melissa.pereira@MELISSA MINGW32 ~
+$ git clone "https://github.com/melissasopereira/git-bash-intro.git"
+Cloning into 'git-bash-intro'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+
